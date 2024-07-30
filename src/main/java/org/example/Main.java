@@ -30,11 +30,17 @@ public class Main {
             if (uniqueIntegers.isEmpty()) {
                 throw new ArithmeticException("Cannot calculate average from an empty list.");
             }
+
             average = (double)sum / uniqueIntegers.size();
+
         } catch (ArithmeticException e) {
             System.err.println("Arithmetic exception :" +e.getMessage());
         } catch (IllegalArgumentException | IndexOutOfBoundsException e) {
             System.err.println("Exception :" +e.getMessage());
+        } finally {
+            System.out.println ("Hash set calculations: ");
+            System.out.println ("sum: "+sum);
+            System.out.println ("average : "+average);
         }
 
         try {
